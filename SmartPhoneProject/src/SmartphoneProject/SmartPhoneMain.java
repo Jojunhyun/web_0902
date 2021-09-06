@@ -39,7 +39,7 @@ public class SmartPhoneMain {
 					
 				}
 				else {
-					System.out.println("알 수 없는 번호 입니다.");
+					System.out.println("알 수 없는 번호 입니다..");
 					return;
 				}
 			

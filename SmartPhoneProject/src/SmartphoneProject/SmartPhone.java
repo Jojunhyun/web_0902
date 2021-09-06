@@ -45,12 +45,12 @@ public class SmartPhone {
 		
 		for ( int i = 0; i < c ; i++ ) {
 			
-			System.out.println("이름 : " + contact[i].getName() );			
-			System.out.println("번호 : " + contact[i].getPnumber() );		
-			System.out.println("메일 : " + contact[i].getEmail() );		
-			System.out.println("주소 : " + contact[i].getAdress() );			
-			System.out.println("생일 : " + contact[i].getBirth() );			
-			System.out.println("그룹 : " + contact[i].getGroup() );	
+			System.out.println(" 이름 : " + contact[i].getName() );			
+			System.out.println(" 번호 : " + contact[i].getPnumber() );		
+			System.out.println(" 메일 : " + contact[i].getEmail() );		
+			System.out.println(" 주소 : " + contact[i].getAdress() );			
+			System.out.println(" 생일 : " + contact[i].getBirth() );			
+			System.out.println(" 그룹 : " + contact[i].getGroup() );	
 			System.out.println("-------------------------------------");
 		}
 		

@@ -14,12 +14,12 @@ public class Contact {
 	
 	public void print() {
 		
-		System.out.println("이름 : " + this.name );			
-		System.out.println("번호 : " + this.pnumber );		
-		System.out.println("메일 : " + this.email );		
-		System.out.println("주소 : " + this.adress );			
-		System.out.println("생일 : " + this.birth );			
-		System.out.println("그룹 : " + this.group );	
+		System.out.println(" 이름 : " + this.name );			
+		System.out.println(" 번호 : " + this.pnumber );		
+		System.out.println(" 메일 : " + this.email );		
+		System.out.println(" 주소 : " + this.adress );			
+		System.out.println(" 생일 : " + this.birth );			
+		System.out.println(" 그룹 : " + this.group );	
 		System.out.println("-------------------------------------");
 		
 	}
