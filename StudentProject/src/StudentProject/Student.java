@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Student {
 	
 	ArrayList<Student> students = new ArrayList<Student>();
-
 	
 	String name;
 	int age;
@@ -14,7 +13,6 @@ public class Student {
 	
 	
 	public Student(String name, int age, String studentNum, String major) {
-		super();
 		this.name = name;
 		this.age = age;
 		this.studentNum = studentNum;
@@ -23,12 +21,12 @@ public class Student {
 	
 	public void addstudent(Student student) {
 		students.add(student);
+	}	
+	
+	
+	public void alter(Student student) {
+		students.set(0, student);
 	}
-	
-	
-	
-	
-	
 	
 	
 	
