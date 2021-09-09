@@ -12,7 +12,7 @@ public class SmartPhoneMain {
 	public static Contact input() {
 		
 		System.out.print("이름 : ");			String name = scanner.next();
-		System.out.print("전화번호 : ");			String pnumber = scanner.next();
+		System.out.print("전화번호 : ");		String pnumber = scanner.next();
 		System.out.print("이메일 : ");			String email = scanner.next();	
 		System.out.print("주소 : ");			String adress = scanner.next();
 		System.out.print("생일 : ");			String birth = scanner.next();
@@ -71,7 +71,7 @@ public class SmartPhoneMain {
 				
 				phone.allprint();
 				System.out.println("수정할 번호 입력 : ");		int no2 = scanner.nextInt();
-				if(no2>0 || no2<phone.c) {
+				if(no2>0 && no2<=phone.c) {
 					phone.alter(input(), no2-1);
 				}
 				else {

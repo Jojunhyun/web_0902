@@ -4,12 +4,12 @@ public class Contact {
 	
 	
 	
-	String name = "";
-	String pnumber = "";
-	String email = "";
-	String adress = "";
-	String birth = "";
-	String group = "";
+	private String name;
+	private String pnumber;
+	private String email;
+	private String adress;
+	private String birth;
+	private String group;
 	
 	
 	public void print() {
@@ -26,7 +26,6 @@ public class Contact {
 	
 	
 	public Contact(String name, String pnumber, String email, String adress, String birth, String group) {
-		super();
 		this.name = name;
 		this.pnumber = pnumber;
 		this.email = email;
@@ -37,7 +36,6 @@ public class Contact {
 	
 	
 	public Contact() {
-        super();
         this.name = "";
         this.pnumber = "";
         this.email = "";

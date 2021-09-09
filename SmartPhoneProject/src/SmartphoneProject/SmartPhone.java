@@ -14,8 +14,6 @@ public class SmartPhone {
 	public void alter(Contact contact , int num) {
 		this.contact[num] = contact;
 		System.out.println(">>> 데이터가 수정되었습니다  ("+(num+1)+")");
-		
-		
 	}
 	
 	public boolean delete(String name) {
