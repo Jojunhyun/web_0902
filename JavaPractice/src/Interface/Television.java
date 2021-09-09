@@ -15,16 +15,24 @@ public class Television implements RemoteControl {
 	public void setVolume(int volume) {
 		if(volume>RemoteControl.MAX_VOLUME) {
 			this.volume = RemoteControl.MAX_VOLUME;
-			volume = RemoteControl.MAX_VOLUME;
 		} else if(volume<RemoteControl.MIN_VOLUME) {
 			this.volume = RemoteControl.MIN_VOLUME;
-			this.volume = volume;
 		} else {
 			this.volume = volume;
 		}
+		System.out.println("현재 볼륨 : " + this.volume);
+	}
+	
+	public void callVolume() {
 		System.out.println("현재 볼륨 : " + volume);
 	}
 	
-	
+	/*
+	 * @Override
+	public void setMute(boolean mute) {
+		// TODO Auto-generated method stub
+		RemoteControl.super.setMute(mute);
+	}
+	*/
 	
 }
