@@ -77,24 +77,27 @@ public class SmartPhone {
 		return check;
 	}
 	
-	public void alter(String string) {
+	public boolean alter(String name) {
+		boolean check = true;
 			for(int i = 0; i < c; i++) {
-				if(contacts[i].getName().equals(string)){
+				if(contacts[i].getName().equals(name)){
 					if(contacts[i] instanceof CompanyContact) {
 						contacts[i] = inputCompany();
 					}
 					else if(contacts[i] instanceof CustomerContact) {
 						contacts[i] = inputCustomer();
 					}
+					check = false;
 				}
 			}
+			return check;
 		}
 	
 	
-	public boolean delete(String string) {
+	public boolean delete(String name) {
 		boolean check = true;
 		for(int i = 0; i < c; i++) {
-			if(contacts[i].getName().equals(string)) {
+			if(contacts[i].getName().equals(name)) {
 				for(int j = i; j < c; j++) {
 					if(j == c-1) {
 						contacts[c] = new Contact();
