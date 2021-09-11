@@ -30,7 +30,6 @@ public class Contact {
 		System.out.println("주소 : " + this.adress);
 		System.out.println("생일 : " + this.birth);
 		System.out.println("그룹 : " + this.group);
-		System.out.println("---------------------------------");
 
 	}
 

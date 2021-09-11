@@ -13,7 +13,7 @@ public class SmartPhone {
 		in = new Scanner(System.in);
 	}
 	
-	public Contact input() {
+	public CompanyContact inputCompany() {
 		
 		System.out.print("이름 : " );		String name = in.nextLine();
 		System.out.print("전화번호 : " );	String pnumber = in.nextLine();
@@ -21,9 +21,29 @@ public class SmartPhone {
 		System.out.print("주소 : " );		String adress = in.nextLine();
 		System.out.print("생일 : " );		String birth = in.nextLine();
 		System.out.print("그룹 : " );		String group = in.nextLine();
+		System.out.print("회사이름 : " );	String companyName = in.nextLine();
+		System.out.print("부서이름 : " );	String deportmant = in.nextLine();
+		System.out.print("직급 : " );		String rank = in.nextLine();
 		
-		Contact contact = new Contact(name, pnumber, email, adress, birth, group);
-		return contact;
+		CompanyContact companyContact = new CompanyContact(name, pnumber, email, adress, birth, group, companyName, deportmant, rank);
+		return companyContact;
+		
+	}
+	
+	public CustomerContact inputCustomer() {
+		
+		System.out.print("이름 : " );		String name = in.nextLine();
+		System.out.print("전화번호 : " );	String pnumber = in.nextLine();
+		System.out.print("이메일 : " );	String email = in.nextLine();
+		System.out.print("주소 : " );		String adress = in.nextLine();
+		System.out.print("생일 : " );		String birth = in.nextLine();
+		System.out.print("그룹 : " );		String group = in.nextLine();
+		System.out.print("거래처이름 : " );	String customerName = in.nextLine();
+		System.out.print("거래품목 : " );	String item = in.nextLine();
+		System.out.print("직급 : " );		String rank = in.nextLine();
+		
+		CustomerContact customerContact = new CustomerContact(name, pnumber, email, adress, birth, group, customerName, item, rank);
+		return customerContact;
 		
 	}
 	
@@ -34,13 +54,15 @@ public class SmartPhone {
 	}
 	
 	public void printMenu() {
+		System.out.println();
 		System.out.println("Contact-------------------------");
-		System.out.println(">> 1. 연락처 등록");
-		System.out.println(">> 2. 모든 연락처 출력");
-		System.out.println(">> 3. 연락처 검색");
-		System.out.println(">> 4. 연락처 삭제");
-		System.out.println(">> 5. 연락처 수정");
-		System.out.println(">> 6. 프로그램 종료");
+		System.out.println(">> 1. 연락처 등록(회사)");
+		System.out.println(">> 2. 연락처 등록(거래처)");
+		System.out.println(">> 3. 모든 연락처 출력");
+		System.out.println(">> 4. 연락처 검색");
+		System.out.println(">> 5. 연락처 삭제");
+		System.out.println(">> 6. 연락처 수정");
+		System.out.println(">> 7. 프로그램 종료");
 		System.out.println("--------------------------------");
 	}
 	
@@ -55,13 +77,15 @@ public class SmartPhone {
 		return check;
 	}
 	
-	public void alter(Contact contact, String string) {
+	public void alter(String string) {
 			for(int i = 0; i < c; i++) {
 				if(contacts[i].getName().equals(string)){
-					contacts[i] = contact;					
-				}
-				else {
-					System.out.println("존재하지 않는 이름입니다.");
+					if(contacts[i] instanceof CompanyContact) {
+						contacts[i] = inputCompany();
+					}
+					else if(contacts[i] instanceof CustomerContact) {
+						contacts[i] = inputCustomer();
+					}
 				}
 			}
 		}
@@ -88,9 +112,12 @@ public class SmartPhone {
 	
 	public void printAll() {
 		for(int i = 0; i < c; i++) {
-			System.out.println("("+(i+1)+")");
+			System.out.println();
+			System.out.println("---------------------------------");
 			contacts[i].print();
+			System.out.println("---------------------------------");
 		}
 	}
-
+	
 }
+
