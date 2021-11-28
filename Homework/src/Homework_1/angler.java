@@ -2,7 +2,7 @@ package Homework_1;
 
 public class angler {
 	int a;
-	int  b;
+	int b;
 	
 	
 	public void up() {

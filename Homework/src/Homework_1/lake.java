@@ -3,7 +3,7 @@ package Homework_1;
 import java.util.Random;
 import java.util.Scanner;
 
-public class lake {
+public class  lake {
 	
 	public static void main(String[] args) {
 		
