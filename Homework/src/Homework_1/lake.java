@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class  lake {
-	
+	 
 	public static void main(String[] args) {
 		
 		// 호수[5][5] 
