@@ -6,7 +6,7 @@ public class angler {
 	
 	
 	public void up() {
-		a--;
+		a--; 
 	}
 	public void left() {
 		b--;

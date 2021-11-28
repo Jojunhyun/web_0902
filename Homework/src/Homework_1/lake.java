@@ -9,7 +9,7 @@ public class  lake {
 		
 		// 호수[5][5] 
 		// 스캔 1,2,3,4
-		// 
+		//  
 		int [][]a = new int[5][5];
 		int tempx;
 		int tempy;
